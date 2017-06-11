@@ -40,7 +40,7 @@ public class SalesTaxesSolutionMainTest
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);
         pw.println("Sales Taxes: 0.00");
-        pw.println("Total: 0.0");
+        pw.println("Total: 0.00");
         pw.close();
         String expectedResult = sw.toString();
 
