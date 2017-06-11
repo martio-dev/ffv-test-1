@@ -44,16 +44,17 @@ public final class ReceiptProcessor {
             taxesCalculationChain.doAction(receiptInvoice);
 
             double invoiceTax = receiptInvoice.getTaxesAmount().doubleValue();
+            double invoicePrice = receiptInvoice.getBasePrice().doubleValue() + invoiceTax;
 
             totalTaxes += invoiceTax;
-            totalPrice += (receiptInvoice.getBasePrice().doubleValue() + invoiceTax);
+            totalPrice += invoicePrice;
 
             resultBuilder
                     .append(receiptInvoice.getQuantity())
                     .append(" ")
                     .append(receiptInvoice.getCaption())
                     .append(": ")
-                    .append(PRICE_FORMATER.format(totalPrice))
+                    .append(PRICE_FORMATER.format(invoicePrice))
                     .append(systemNewLine);
         }
 
