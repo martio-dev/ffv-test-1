@@ -37,11 +37,12 @@ public class SalesTaxesSolutionMainTest
 
         String calculatedResult = emptyProcessorSample.printReceiptDetails();
 
-        PrintWriter pw = new PrintWriter(new StringWriter());
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
         pw.println("Sales Taxes: 0.00");
         pw.println("Total: 0.0");
         pw.close();
-        String expectedResult = pw.toString();
+        String expectedResult = sw.toString();
 
         assertEquals(calculatedResult, expectedResult);
     }
@@ -52,12 +53,13 @@ public class SalesTaxesSolutionMainTest
                 .build()
                 .printReceiptDetails();
 
-        PrintWriter pw = new PrintWriter(new StringWriter());
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
         pw.println("1 book: 16.99");
         pw.println("Sales Taxes: 0.00");
         pw.println("Total: 16.99");
         pw.close();
-        String expectedResult = pw.toString();
+        String expectedResult = sw.toString();
 
         assertEquals(calculatedResult, expectedResult);
     }
@@ -68,12 +70,13 @@ public class SalesTaxesSolutionMainTest
                 .build()
                 .printReceiptDetails();
 
-        PrintWriter pw = new PrintWriter(new StringWriter());
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
         pw.println("1 chocolate bar: 1.50");
         pw.println("Sales Taxes: 0.00");
         pw.println("Total: 1.50");
         pw.close();
-        String expectedResult = pw.toString();
+        String expectedResult = sw.toString();
 
         assertEquals(calculatedResult, expectedResult);
     }
@@ -84,12 +87,13 @@ public class SalesTaxesSolutionMainTest
                 .build()
                 .printReceiptDetails();
 
-        PrintWriter pw = new PrintWriter(new StringWriter());
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
         pw.println("1 headache pills: 8.75");
         pw.println("Sales Taxes: 0.00");
         pw.println("Total: 8.75");
         pw.close();
-        String expectedResult = pw.toString();
+        String expectedResult = sw.toString();
 
         assertEquals(calculatedResult, expectedResult);
     }
@@ -100,12 +104,13 @@ public class SalesTaxesSolutionMainTest
                 .build()
                 .printReceiptDetails();
 
-        PrintWriter pw = new PrintWriter(new StringWriter());
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
         pw.println("1 car: 24999.00");
         pw.println("Sales Taxes: 2499.90");
         pw.println("Total: 27498.90");
         pw.close();
-        String expectedResult = pw.toString();
+        String expectedResult = sw.toString();
 
         assertEquals(calculatedResult, expectedResult);
     }
@@ -116,12 +121,13 @@ public class SalesTaxesSolutionMainTest
                 .build()
                 .printReceiptDetails();
 
-        PrintWriter pw = new PrintWriter(new StringWriter());
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
         pw.println("1 imported book: 20.80");
         pw.println("Sales Taxes: 1.05");
         pw.println("Total: 21.85");
         pw.close();
-        String expectedResult = pw.toString();
+        String expectedResult = sw.toString();
 
         assertEquals(calculatedResult, expectedResult);
     }
@@ -132,12 +138,13 @@ public class SalesTaxesSolutionMainTest
                 .build()
                 .printReceiptDetails();
 
-        PrintWriter pw = new PrintWriter(new StringWriter());
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
         pw.println("1 imported car: 24999.00");
         pw.println("Sales Taxes: 3749.85");
         pw.println("Total: 28748.85");
         pw.close();
-        String expectedResult = pw.toString();
+        String expectedResult = sw.toString();
 
         assertEquals(calculatedResult, expectedResult);
     }
@@ -151,14 +158,15 @@ public class SalesTaxesSolutionMainTest
                 .build()
                 .printReceiptDetails();
 
-        PrintWriter pw = new PrintWriter(new StringWriter());
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
         pw.println("1 book : 12.49");
         pw.println("1 music CD: 16.49");
         pw.println("1 chocolate bar: 0.85");
         pw.println("Sales Taxes: 1.50");
         pw.println("Total: 29.83");
         pw.close();
-        String expectedResult = pw.toString();
+        String expectedResult = sw.toString();
 
         assertEquals(calculatedResult, expectedResult);
     }
@@ -171,13 +179,14 @@ public class SalesTaxesSolutionMainTest
                 .build()
                 .printReceiptDetails();
 
-        PrintWriter pw = new PrintWriter(new StringWriter());
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
         pw.println("1 imported box of chocolates: 10.50");
         pw.println("1 imported bottle of perfume: 54.65");
         pw.println("Sales Taxes: 7.65");
         pw.println("Total: 65.15");
         pw.close();
-        String expectedResult = pw.toString();
+        String expectedResult = sw.toString();
 
         assertEquals(calculatedResult, expectedResult);
     }
@@ -192,7 +201,8 @@ public class SalesTaxesSolutionMainTest
                 .build()
                 .printReceiptDetails();
 
-        PrintWriter pw = new PrintWriter(new StringWriter());
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
         pw.println("1 imported bottle of perfume: 32.19");
         pw.println("1 bottle of perfume: 20.89");
         pw.println("1 packet of headache pills: 9.75");
@@ -200,7 +210,7 @@ public class SalesTaxesSolutionMainTest
         pw.println("Sales Taxes: 6.70");
         pw.println("Total: 74.68");
         pw.close();
-        String expectedResult = pw.toString();
+        String expectedResult = sw.toString();
 
         assertEquals(calculatedResult, expectedResult);
     }
