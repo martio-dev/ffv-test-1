@@ -123,7 +123,7 @@ public class SalesTaxesSolutionMainTest
 
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);
-        pw.println("1 imported book: 20.80");
+        pw.println("1 imported book: 21.85");
         pw.println("Sales Taxes: 1.05");
         pw.println("Total: 21.85");
         pw.close();
@@ -140,7 +140,7 @@ public class SalesTaxesSolutionMainTest
 
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);
-        pw.println("1 imported car: 24999.00");
+        pw.println("1 imported car: 28748.85");
         pw.println("Sales Taxes: 3749.85");
         pw.println("Total: 28748.85");
         pw.close();
