@@ -37,14 +37,14 @@ public final class ReceiptProcessor {
                 ._add(new ImportDutyTaxCalculator())
                 .get();
 
-        Double totalTaxes = 0.0;
-        Double totalPrice = 0.0;
+        double totalTaxes = 0.0;
+        double totalPrice = 0.0;
 
         for (ReceiptInvoice receiptInvoice : this.invoices) {
             taxesCalculationChain.doAction(receiptInvoice);
 
-            double invoiceTax = receiptInvoice.getTaxesAmount().doubleValue();
-            double invoicePrice = receiptInvoice.getBasePrice().doubleValue() + invoiceTax;
+            double invoiceTax = receiptInvoice.getQuantity() * receiptInvoice.getTaxesAmount().doubleValue();
+            double invoicePrice = receiptInvoice.getQuantity() * receiptInvoice.getBasePrice().doubleValue() + invoiceTax;
 
             totalTaxes += invoiceTax;
             totalPrice += invoicePrice;

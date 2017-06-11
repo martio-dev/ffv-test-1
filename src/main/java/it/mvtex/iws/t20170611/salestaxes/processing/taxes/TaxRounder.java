@@ -12,7 +12,7 @@ public final class TaxRounder {
     }
 
     public Number round(Number toBeRounded) {
-        double result = 0.05 * (Math.floor(Math.round(toBeRounded.doubleValue() / 0.05)));
+        double result = 0.05 * (Math.ceil(Math.abs(toBeRounded.doubleValue() / 0.05)));
 
         return result;
     }
