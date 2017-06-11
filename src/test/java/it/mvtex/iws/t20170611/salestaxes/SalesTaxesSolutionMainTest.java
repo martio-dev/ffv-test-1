@@ -160,7 +160,7 @@ public class SalesTaxesSolutionMainTest
 
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);
-        pw.println("1 book : 12.49");
+        pw.println("1 book: 12.49");
         pw.println("1 music CD: 16.49");
         pw.println("1 chocolate bar: 0.85");
         pw.println("Sales Taxes: 1.50");
