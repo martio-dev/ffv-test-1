@@ -106,7 +106,7 @@ public class SalesTaxesSolutionMainTest
 
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);
-        pw.println("1 car: 24999.00");
+        pw.println("1 car: 27498.90");
         pw.println("Sales Taxes: 2499.90");
         pw.println("Total: 27498.90");
         pw.close();
