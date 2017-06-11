@@ -5,15 +5,15 @@ public final class ReceiptProcessor {
     public static final class Builder {
 
         public Builder addInvoices(String... invoices) {
-            return null;
+            return this;
         }
 
         public Builder addInvoice(String invoice) {
-            return null;
+            return this;
         }
 
         public ReceiptProcessor build() {
-            return null;
+            return new ReceiptProcessor();
         }
 
     }
