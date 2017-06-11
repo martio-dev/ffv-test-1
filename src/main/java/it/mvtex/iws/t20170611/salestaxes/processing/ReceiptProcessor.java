@@ -11,6 +11,7 @@ import it.mvtex.iws.t20170611.salestaxes.model.ReceiptInvoice;
 import it.mvtex.iws.t20170611.salestaxes.processing.pattern.chain.ChainBuilder;
 import it.mvtex.iws.t20170611.salestaxes.processing.pattern.chain.ChainElement;
 import it.mvtex.iws.t20170611.salestaxes.processing.taxes.basicsales.BasicSalesTaxCalculator;
+import it.mvtex.iws.t20170611.salestaxes.processing.taxes.importduty.ImportDutyTaxCalculator;
 
 public final class ReceiptProcessor {
 
@@ -33,6 +34,7 @@ public final class ReceiptProcessor {
 
         ChainElement<ReceiptInvoice> taxesCalculationChain = ChainBuilder.<ReceiptInvoice>start()
                 ._add(new BasicSalesTaxCalculator())
+                ._add(new ImportDutyTaxCalculator())
                 .get();
 
         Double totalTaxes = 0.0;

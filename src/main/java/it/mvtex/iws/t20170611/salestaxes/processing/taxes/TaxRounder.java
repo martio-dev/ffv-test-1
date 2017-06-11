@@ -12,11 +12,7 @@ public final class TaxRounder {
     }
 
     public Number round(Number toBeRounded) {
-        Long aux = (long)(toBeRounded.doubleValue() * 100);
-
-        aux = (long)(5 * (Math.round(aux / 5)));
-
-        double result = new Double(aux) / 100;
+        double result = 0.05 * (Math.floor(Math.round(toBeRounded.doubleValue() / 0.05)));
 
         return result;
     }
