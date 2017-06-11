@@ -16,7 +16,9 @@ public final class TaxRounder {
 
         aux = (long)(5 * (Math.round(aux / 5)));
 
-        return new Double(aux / 100);
+        double result = new Double(aux) / 100;
+
+        return result;
     }
 
 }
